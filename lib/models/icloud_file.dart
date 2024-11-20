@@ -36,8 +36,8 @@ class ICloudFile {
             ((map['contentChangeDate'] as double) * 1000).round()),
         isDownloading = map['isDownloading'],
         downloadStatus = _mapToDownloadStatusFromNSKeys(map['downloadStatus']),
-        isUploading = map['isUploading'],
-        isUploaded = map['isUploaded'],
+        isUploading = map['isUploading'] ?? false,
+        isUploaded = map['isUploaded'] ?? false,
         hasUnresolvedConflicts = map['hasUnresolvedConflicts'];
 
   /// Map native download status keys to DownloadStatus enum
